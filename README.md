@@ -29,8 +29,12 @@ To manually install frappe/erpnext here are the steps
 #### 2. Install Bench
 
 Install bench as a *non root* user,
+##### For github repo clone use 
+	git clone https://github.com/alienhu/bench bench-repo
 
-	git clone https://github.com/frappe/bench bench-repo
+##### For local repo clone use 
+	git clone C:\folder1 folder2
+
 	sudo pip install -e bench-repo
 
 Note: Please do not remove the bench directory the above commands will create
@@ -43,7 +47,7 @@ Note: Please do not remove the bench directory the above commands will create
 	installed. It will be setup for periodic backups and auto updates once
 	a day.
 
-		bench init frappe-bench && cd frappe-bench
+		bench init alienhu-bench && cd alienhu-bench
 
 * Add a site
 
@@ -57,6 +61,8 @@ Note: Please do not remove the bench directory the above commands will create
 	The get-app command gets remote frappe apps from a remote git repository and installs them. Example: [erpnext](https://github.com/frappe/erpnext)
 
 		bench get-app erpnext https://github.com/frappe/erpnext
+     Get App from local folder.
+	 bench get-app erpnext bk@192.168.1.14:/home/bk/workspace_profitguruERP/erpnext
 
 * Install apps
 
